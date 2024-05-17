@@ -13,10 +13,12 @@ public class Contador {
                 contar(parametroUm, parametroDois);
             } catch (ParametrosInvalidosException e){
                 System.out.println("O segundo parâmetro deve ser maior que o primeiro.");;
-            }
+            } finally {
+                terminal.close();
+            }  
         }  catch (InputMismatchException e){
             System.out.println("Por favor, entre com valor numerico.");
-        }    
+        }  
     }
     
     static void contar(int parametroUm, int parametroDois) throws ParametrosInvalidosException {
